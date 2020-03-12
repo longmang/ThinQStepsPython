@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - tdmstep@192.168.1.22">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
+    <root id="1"/>
+    <schema id="2" parent="1" name="tdmstep">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="accounts"/>
+    <table id="4" parent="2" name="accountsdata"/>
+    <table id="5" parent="2" name="accountsgroup"/>
+    <table id="6" parent="2" name="accountsgroupmembers"/>
+    <table id="7" parent="2" name="accountssettings"/>
+    <table id="8" parent="2" name="accountssubgroup"/>
+    <table id="9" parent="2" name="accountstargets"/>
+    <table id="10" parent="2" name="companyrequests"/>
+    <table id="11" parent="2" name="emailtemplates"/>
+    <table id="12" parent="2" name="friends"/>
+    <table id="13" parent="2" name="gcmgroupnotifycheck"/>
+    <table id="14" parent="2" name="gcmnotifycheck"/>
+    <table id="15" parent="2" name="gcmsubgroupnotifycheck"/>
+    <table id="16" parent="2" name="gcmtokens"/>
+    <table id="17" parent="2" name="groupdata"/>
+    <table id="18" parent="2" name="groupday"/>
+    <table id="19" parent="2" name="groupmonth"/>
+    <table id="20" parent="2" name="groupyear"/>
+    <table id="21" parent="2" name="multidevicesetting"/>
+    <table id="22" parent="2" name="rankgroup"/>
+    <table id="23" parent="2" name="ranksubgroup"/>
+    <table id="24" parent="2" name="stepdata"/>
+    <table id="25" parent="2" name="stepday"/>
+    <table id="26" parent="2" name="stepmonth"/>
+    <table id="27" parent="2" name="stepyear"/>
+    <table id="28" parent="2" name="subscriptionnumberregistry"/>
+    <table id="29" parent="2" name="subscriptionorders"/>
+    <table id="30" parent="2" name="gcmmessages"/>
+    <routine id="31" parent="2" name="UpdateGroupData">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="32" parent="2" name="UpdateGroupDataMonth">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="33" parent="2" name="UpdateGroupRank">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="34" parent="2" name="UpdateStepData">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="35" parent="2" name="UpdateSubGroupRank">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="36" parent="3" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="3" name="email">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="3" name="firstname">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="39" parent="3" name="secondname">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="40" parent="3" name="gender">
+      <DataType>varchar(1)|0s</DataType>
+    </column>
+    <column id="41" parent="3" name="dob">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="42" parent="3" name="city">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="43" parent="3" name="country">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="44" parent="3" name="timezone">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="45" parent="3" name="identifier">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="3" name="pass_word">
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="47" parent="3" name="salt">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="48" parent="3" name="logintype">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="49" parent="3" name="loginidentifier">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="50" parent="3" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="51" parent="3" name="dateedited">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="52" parent="3" name="activationtoken">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="53" parent="3" name="lastlogin">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="54" parent="3" name="lastactivity">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="55" parent="3" name="lastloginip">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="56" parent="3" name="forgottoken">
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="57" parent="3" name="logintoken">
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="58" parent="3" name="status">
+      <DataType>tinyint(4)|0s</DataType>
+    </column>
+    <index id="59" parent="3" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="60" parent="3" name="email_UNIQUE">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="61" parent="3" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="3" name="idx_email">
+      <ColNames>email</ColNames>
+    </index>
+    <key id="63" parent="3" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <key id="64" parent="3" name="email_UNIQUE">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="65" parent="3" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="66" parent="3" name="PRIMARY">
+      <ColNames>idaccounts</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="4" name="idaccountsdata">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="4" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="4" name="age">
+      <DataType>smallint(6)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="4" name="weight">
+      <DataType>smallint(6)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="4" name="height">
+      <DataType>smallint(6)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="72" parent="4" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="73" parent="4" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="74" parent="4" name="PRIMARY">
+      <ColNames>idaccountsdata</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="5" name="idaccountsgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="5" name="groupname">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="5" name="adminidaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="5" name="shortname">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="79" parent="5" name="identifier">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <key id="80" parent="5" name="PRIMARY">
+      <ColNames>idaccountsgroup</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="6" name="idaccountsgroupmembers">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="82" parent="6" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="6" name="idaccountsgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="6" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="85" parent="6" name="idx_accountssubgroup_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="86" parent="6" name="idx_accountssubgroup_idaccountsgroup">
+      <ColNames>idaccountsgroup</ColNames>
+    </index>
+    <key id="87" parent="6" name="PRIMARY">
+      <ColNames>idaccountsgroupmembers</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="7" name="idaccountssettings">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="7" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="7" name="metricimperial">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="7" name="notifications">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="7" name="notificationsfriends">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="7" name="notificationscompany">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="7" name="tracking">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="7" name="distancecaloriesfitapi">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="7" name="multidevicesetting">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="7" name="idmultidevicesetting">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="98" parent="7" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="7" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="100" parent="7" name="PRIMARY">
+      <ColNames>idaccountssettings</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="101" parent="8" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="102" parent="8" name="idaccountsgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="8" name="subgroupname">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="104" parent="8" name="adminidaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="8" name="shortname">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <column id="106" parent="8" name="identifier">
+      <DataType>varchar(45)|0s</DataType>
+    </column>
+    <index id="107" parent="8" name="idx_accountssubgroup_idaccountsgroup">
+      <ColNames>idaccountsgroup</ColNames>
+    </index>
+    <key id="108" parent="8" name="PRIMARY">
+      <ColNames>idaccountssubgroup</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="109" parent="9" name="idaccountstargets">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="110" parent="9" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="9" name="stepstarget">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="9" name="distancetarget">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="9" name="minutestarget">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="9" name="caloriestarget">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="9" name="linkedtargets">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="9" name="linkedposition">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="117" parent="9" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="118" parent="9" name="idx_accountstargets_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <key id="119" parent="9" name="idaccounts_UNIQUE">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="120" parent="9" name="PRIMARY">
+      <ColNames>idaccountstargets</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="121" parent="10" name="idcompanyrequests">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="122" parent="10" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="10" name="company">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="10" name="companynumber">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="125" parent="10" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="10" name="status">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="127" parent="10" name="companynumber">
+      <ColNames>companynumber</ColNames>
+    </index>
+    <index id="128" parent="10" name="idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <key id="129" parent="10" name="PRIMARY">
+      <ColNames>idcompanyrequests</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="130" parent="11" name="idemailtemplates">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="11" name="title">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="11" name="htmlversion">
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="11" name="textversion">
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="134" parent="11" name="availabletokens">
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="135" parent="11" name="dateedited">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="136" parent="11" name="fromname">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="137" parent="11" name="fromemail">
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="11" name="emailsubject">
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="139" parent="11" name="PRIMARY">
+      <ColNames>idemailtemplates</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="140" parent="12" name="idfriends">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="141" parent="12" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="142" parent="12" name="friendidaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="143" parent="12" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="144" parent="12" name="accepted">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="145" parent="12" name="favorite">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="12" name="status">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="147" parent="12" name="idx_friends_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <key id="148" parent="12" name="PRIMARY">
+      <ColNames>idfriends</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="149" parent="13" name="idgcmgroupnotifycheck">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="150" parent="13" name="idaccountsgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="151" parent="13" name="daydatecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="152" parent="13" name="monthdatecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="153" parent="13" name="idaccountsgroup">
+      <ColNames>idaccountsgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="154" parent="13" name="idaccountsgroup">
+      <ColNames>idaccountsgroup</ColNames>
+      <UnderlyingIndexName>idaccountsgroup</UnderlyingIndexName>
+    </key>
+    <key id="155" parent="13" name="PRIMARY">
+      <ColNames>idgcmgroupnotifycheck</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="156" parent="14" name="idgcmnotifycheck">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="157" parent="14" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="158" parent="14" name="daydatecreated">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="159" parent="14" name="day25perc">
+      <DataType>bit(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="160" parent="14" name="day50perc">
+      <DataType>bit(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="161" parent="14" name="day75perc">
+      <DataType>bit(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="162" parent="14" name="day100perc">
+      <DataType>bit(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="163" parent="14" name="monthdatecreated">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="164" parent="14" name="idaccounts_unique">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="165" parent="14" name="idaccounts_unique">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_unique</UnderlyingIndexName>
+    </key>
+    <key id="166" parent="14" name="PRIMARY">
+      <ColNames>idgcmnotifycheck</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="167" parent="15" name="idgcmsubgroupnotifycheck">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="168" parent="15" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="169" parent="15" name="daydatecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="170" parent="15" name="monthdatecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="171" parent="15" name="idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="172" parent="15" name="idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+      <UnderlyingIndexName>idaccountssubgroup</UnderlyingIndexName>
+    </key>
+    <key id="173" parent="15" name="PRIMARY">
+      <ColNames>idgcmsubgroupnotifycheck</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="174" parent="16" name="idgcmtokens">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="175" parent="16" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="176" parent="16" name="token">
+      <DataType>varchar(4096)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="177" parent="16" name="idaccounts_unique">
+      <ColNames>idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="178" parent="16" name="idaccounts_unique">
+      <ColNames>idaccounts</ColNames>
+      <UnderlyingIndexName>idaccounts_unique</UnderlyingIndexName>
+    </key>
+    <key id="179" parent="16" name="PRIMARY">
+      <ColNames>idgcmtokens</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="180" parent="17" name="idgroupdata">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="181" parent="17" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="182" parent="17" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="183" parent="17" name="stepcount">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="184" parent="17" name="distance">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="185" parent="17" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="186" parent="17" name="calories">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="187" parent="17" name="idx_groupdata_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="188" parent="17" name="idx_groupdata_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="189" parent="17" name="idx_groupdata_idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+    </index>
+    <key id="190" parent="17" name="idx_groupdata_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <UnderlyingIndexName>idx_groupdata_datecreated_idaccountssubgroup</UnderlyingIndexName>
+    </key>
+    <key id="191" parent="17" name="PRIMARY">
+      <ColNames>idgroupdata</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="192" parent="18" name="idgroupday">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="193" parent="18" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="194" parent="18" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="195" parent="18" name="daysteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="196" parent="18" name="distance">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="197" parent="18" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="198" parent="18" name="calories">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="199" parent="18" name="idx_groupday_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="200" parent="18" name="idx_groupday_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="201" parent="18" name="idx_groupday_idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+    </index>
+    <key id="202" parent="18" name="idx_groupday_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <UnderlyingIndexName>idx_groupday_datecreated_idaccountssubgroup</UnderlyingIndexName>
+    </key>
+    <key id="203" parent="18" name="PRIMARY">
+      <ColNames>idgroupday</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="204" parent="19" name="idgroupmonth">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="205" parent="19" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="206" parent="19" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="207" parent="19" name="monthsteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="208" parent="19" name="distance">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="209" parent="19" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="210" parent="19" name="calories">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="211" parent="19" name="idx_groupmonth_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="212" parent="19" name="idx_groupmonth_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="213" parent="19" name="idx_groupmonth_idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+    </index>
+    <key id="214" parent="19" name="idx_groupmonth_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <UnderlyingIndexName>idx_groupmonth_datecreated_idaccountssubgroup</UnderlyingIndexName>
+    </key>
+    <key id="215" parent="19" name="PRIMARY">
+      <ColNames>idgroupmonth</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="216" parent="20" name="idgroupyear">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="217" parent="20" name="idaccountssubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="218" parent="20" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="219" parent="20" name="yearsteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="220" parent="20" name="distance">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="221" parent="20" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="222" parent="20" name="calories">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="223" parent="20" name="idx_groupyear_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="224" parent="20" name="idx_groupyear_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="225" parent="20" name="idx_groupyear_idaccountssubgroup">
+      <ColNames>idaccountssubgroup</ColNames>
+    </index>
+    <key id="226" parent="20" name="idx_groupyear_datecreated_idaccountssubgroup">
+      <ColNames>datecreated
+idaccountssubgroup</ColNames>
+      <UnderlyingIndexName>idx_groupyear_datecreated_idaccountssubgroup</UnderlyingIndexName>
+    </key>
+    <key id="227" parent="20" name="PRIMARY">
+      <ColNames>idgroupyear</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="228" parent="21" name="idmultidevicesetting">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="229" parent="21" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="230" parent="21" name="devicename">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="231" parent="21" name="deviceos">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="232" parent="21" name="devicesimplename">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="233" parent="21" name="deviceid">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="234" parent="21" name="deviceprimary">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="235" parent="21" name="anchordate">
+      <DataType>bigint(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="236" parent="21" name="datachangedbydevice">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="237" parent="21" name="idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="238" parent="21" name="idx_idaccounts_deviceid">
+      <ColNames>idaccounts
+deviceid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="239" parent="21" name="idx_idaccounts_deviceid">
+      <ColNames>idaccounts
+deviceid</ColNames>
+      <UnderlyingIndexName>idx_idaccounts_deviceid</UnderlyingIndexName>
+    </key>
+    <key id="240" parent="21" name="PRIMARY">
+      <ColNames>idmultidevicesetting</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="241" parent="22" name="idrankgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="242" parent="22" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="243" parent="22" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="244" parent="22" name="stepsrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="245" parent="22" name="distancerank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="246" parent="22" name="minutesrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="247" parent="22" name="caloriesrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="248" parent="22" name="idx_rankgroup_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="249" parent="22" name="idx_rankgroup_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="250" parent="22" name="idx_rankgroup_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <key id="251" parent="22" name="idx_rankgroup_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_rankgroup_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="252" parent="22" name="PRIMARY">
+      <ColNames>idrankgroup</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="253" parent="23" name="idranksubgroup">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="254" parent="23" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="255" parent="23" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="256" parent="23" name="stepsrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="257" parent="23" name="distancerank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="258" parent="23" name="minutesrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="259" parent="23" name="caloriesrank">
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="260" parent="23" name="idx_ranksubgroup_datecreated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <index id="261" parent="23" name="idx_ranksubgroup_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="262" parent="23" name="idx_ranksubgroup_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <key id="263" parent="23" name="idx_ranksubgroup_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_ranksubgroup_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="264" parent="23" name="PRIMARY">
+      <ColNames>idranksubgroup</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="265" parent="24" name="idstepdata">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="266" parent="24" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="267" parent="24" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="268" parent="24" name="stepcount">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="269" parent="24" name="distance">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="270" parent="24" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="271" parent="24" name="calories">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="272" parent="24" name="longitude">
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="273" parent="24" name="latitude">
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="274" parent="24" name="idx_stepdata_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="275" parent="24" name="idx_stepdata_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="276" parent="24" name="idx_stepdata_lastupdated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <key id="277" parent="24" name="idx_stepdata_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_stepdata_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="278" parent="24" name="PRIMARY">
+      <ColNames>idstepdata</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="279" parent="25" name="idstepday">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="280" parent="25" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="281" parent="25" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="282" parent="25" name="daysteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="283" parent="25" name="distance">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="284" parent="25" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="285" parent="25" name="calories">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="286" parent="25" name="idx_stepday_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="287" parent="25" name="idx_stepday_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="288" parent="25" name="idx_stepday_lastupdated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <key id="289" parent="25" name="idx_stepday_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_stepday_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="290" parent="25" name="PRIMARY">
+      <ColNames>idstepday</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="291" parent="26" name="idstepmonth">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="292" parent="26" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="293" parent="26" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="294" parent="26" name="monthsteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="295" parent="26" name="distance">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="296" parent="26" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="297" parent="26" name="calories">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="298" parent="26" name="idx_stepmonth_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="299" parent="26" name="idx_stepmonth_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="300" parent="26" name="idx_stepmonth_lastupdated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <key id="301" parent="26" name="idx_stepmonth_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_stepmonth_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="302" parent="26" name="PRIMARY">
+      <ColNames>idstepmonth</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="303" parent="27" name="idstepyear">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="304" parent="27" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="305" parent="27" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="306" parent="27" name="yearsteps">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="307" parent="27" name="distance">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="308" parent="27" name="activeminutes">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="309" parent="27" name="calories">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="310" parent="27" name="idx_stepyear_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="311" parent="27" name="idx_stepyear_idaccounts">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="312" parent="27" name="idx_stepyear_lastupdated">
+      <ColNames>datecreated</ColNames>
+    </index>
+    <key id="313" parent="27" name="idx_stepyear_datecreated_idaccounts">
+      <ColNames>datecreated
+idaccounts</ColNames>
+      <UnderlyingIndexName>idx_stepyear_datecreated_idaccounts</UnderlyingIndexName>
+    </key>
+    <key id="314" parent="27" name="PRIMARY">
+      <ColNames>idstepyear</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="315" parent="28" name="idsubscriptionnumberregistry">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="316" parent="28" name="subscriptionnumber">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="317" parent="28" name="PRIMARY">
+      <ColNames>idsubscriptionnumberregistry</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="318" parent="29" name="idsubscriptionorders">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="319" parent="29" name="ordernumber">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="320" parent="29" name="reference">
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="321" parent="29" name="idaccounts">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="322" parent="29" name="recurring">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="323" parent="29" name="months">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="324" parent="29" name="gatewayresponse">
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="325" parent="29" name="datecreated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="326" parent="29" name="daterecurringupdated">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="327" parent="29" name="dateexpires">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="328" parent="29" name="datecancelled">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="329" parent="29" name="status">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="330" parent="29" name="date_expires">
+      <ColNames>dateexpires</ColNames>
+    </index>
+    <index id="331" parent="29" name="member_id">
+      <ColNames>idaccounts</ColNames>
+    </index>
+    <index id="332" parent="29" name="status">
+      <ColNames>status</ColNames>
+    </index>
+    <key id="333" parent="29" name="PRIMARY">
+      <ColNames>idsubscriptionorders</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="334" parent="30" name="idgcmmessages">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="335" parent="30" name="percent">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="336" parent="30" name="timeofday">
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="337" parent="30" name="message">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="338" parent="30" name="percent_INDEX">
+      <ColNames>percent</ColNames>
+    </index>
+    <key id="339" parent="30" name="PRIMARY">
+      <ColNames>idgcmmessages</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
